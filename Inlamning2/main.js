@@ -55,22 +55,26 @@ class NewProduct {
 		let newProduct = new Product(this.name, this.price);
 		if (this.kategori == 'Lask') {
 			lask.add(newProduct);
-			let button = document.getElementById('Lask');
+			let cat = document.getElementById('LaskDIV');
+			let button = document.createElement('button');
+			button.innerHTML = this.name;
 			button.className = 'button button1';
+			button.onclick = 'addNewProduct(newProduct)';
+			cat.appendChild(button);
 		}
 		if (this.kategori == 'Alkohol') {
 			alcohol.add(newProduct);
-			let button = document.getElementById('Alkohol');
+			let cat = document.getElementById('Alkohol');
 			button.className = 'button button1';
 		}
 		if (this.kategori == 'coldDrinks') {
 			coldDrinks.add(newProduct);
-			let button = document.getElementById('Kallt');
+			let cat = document.getElementById('Kallt');
 			button.className = 'button button1';
 		}
 		if (this.kategori == 'snacks') {
 			snacks.add(newProduct);
-			let button = document.getElementById('Snacks');
+			let cat = document.getElementById('Snacks');
 			button.className = 'button button1';
 		}
 	}
