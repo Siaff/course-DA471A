@@ -47,7 +47,7 @@ class Basket {
 class NewProduct {
 	constructor(name, price, kategori) {
 		this.name = name;
-		this.price = price;
+		this.price = Number(price);
 		this.kategori = kategori;
 	}
 	update() {
@@ -59,23 +59,43 @@ class NewProduct {
 			let button = document.createElement('button');
 			button.innerHTML = this.name;
 			button.className = 'button button1';
-			button.onclick = 'addNewProduct(newProduct)';
+			button.onclick = function () {
+				addToBasket(newProduct);
+			};
 			cat.appendChild(button);
 		}
 		if (this.kategori == 'Alkohol') {
 			alcohol.add(newProduct);
-			let cat = document.getElementById('Alkohol');
+			let cat = document.getElementById('AlkoholDIV');
+			let button = document.createElement('button');
+			button.innerHTML = this.name;
 			button.className = 'button button1';
+			button.onclick = function () {
+				addToBasket(newProduct);
+			};
+			cat.appendChild(button);
 		}
 		if (this.kategori == 'coldDrinks') {
 			coldDrinks.add(newProduct);
-			let cat = document.getElementById('Kallt');
+			let cat = document.getElementById('KalltDIV');
+			let button = document.createElement('button');
+			button.innerHTML = this.name;
 			button.className = 'button button1';
+			button.onclick = function () {
+				addToBasket(newProduct);
+			};
+			cat.appendChild(button);
 		}
 		if (this.kategori == 'snacks') {
 			snacks.add(newProduct);
-			let cat = document.getElementById('Snacks');
+			let cat = document.getElementById('SnacksDIV');
+			let button = document.createElement('button');
+			button.innerHTML = this.name;
 			button.className = 'button button1';
+			button.onclick = function () {
+				addToBasket(newProduct);
+			};
+			cat.appendChild(button);
 		}
 	}
 	get() {
