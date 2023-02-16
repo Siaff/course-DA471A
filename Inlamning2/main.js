@@ -28,6 +28,9 @@ class Basket {
 		// Write out all items in basket and total price of all items in basket in the Varukorg div
 		let basket = document.getElementById('Varukorg');
 		basket.innerHTML = '';
+		let title = document.createElement('h1');
+		title.innerHTML = 'Varukorg';
+		basket.appendChild(title);
 		let total = 0;
 		for (let i = 0; i < this.items.length; i++) {
 			let item = document.createElement('p');
@@ -170,34 +173,55 @@ function addNewProduct() {
 }
 
 function searchProduct() {
-	// Create a search function for the products
+	// Add listener element to search bar and search for product in all categories
 	let search = document.getElementById('search').value;
 	let searchResult = document.getElementById('searchResult');
 	searchResult.innerHTML = '';
-	let searchList = [];
-	for (let i = 0; i < lask.get().length; i++) {
-		if (lask.get()[i].name.includes(search)) {
-			searchList.push(lask.get()[i]);
+	let title = document.createElement('h1');
+	title.innerHTML = 'Sökresultat';
+	searchResult.appendChild(title);
+	let total = 0;
+	for (let i = 0; i < lask.list.length; i++) {
+		if (lask.list[i].name == search) {
+			let item = document.createElement('p');
+			item.innerHTML = lask.list[i].name + ' ' + lask.list[i].price + ' kr';
+			searchResult.appendChild(item);
+			total += lask.list[i].price;
+			let res = snacks.list[i];
+			basket.add(res);
 		}
 	}
-	for (let i = 0; i < alcohol.get().length; i++) {
-		if (alcohol.get()[i].name.includes(search)) {
-			searchList.push(alcohol.get()[i]);
+	for (let i = 0; i < alcohol.list.length; i++) {
+		if (alcohol.list[i].name == search) {
+			let item = document.createElement('p');
+			item.innerHTML = alcohol.list[i].name + ' ' + alcohol.list[i].price + ' kr';
+			searchResult.appendChild(item);
+			total += alcohol.list[i].price;
+			let res = snacks.list[i];
+			basket.add(res);
 		}
 	}
-	for (let i = 0; i < coldDrinks.get().length; i++) {
-		if (coldDrinks.get()[i].name.includes(search)) {
-			searchList.push(coldDrinks.get()[i]);
+	for (let i = 0; i < coldDrinks.list.length; i++) {
+		if (coldDrinks.list[i].name == search) {
+			let item = document.createElement('p');
+			item.innerHTML = coldDrinks.list[i].name + ' ' + coldDrinks.list[i].price + ' kr';
+			searchResult.appendChild(item);
+			total += coldDrinks.list[i].price;
+			let res = snacks.list[i];
+			basket.add(res);
 		}
 	}
-	for (let i = 0; i < snacks.get().length; i++) {
-		if (snacks.get()[i].name.includes(search)) {
-			searchList.push(snacks.get()[i]);
+	for (let i = 0; i < snacks.list.length; i++) {
+		if (snacks.list[i].name == search) {
+			let item = document.createElement('p');
+			item.innerHTML = snacks.list[i].name + ' ' + snacks.list[i].price + ' kr';
+			searchResult.appendChild(item);
+			total += snacks.list[i].price;
+			let res = snacks.list[i];
+			basket.add(res);
 		}
 	}
-	for (let i = 0; i < searchList.length; i++) {
-		let item = document.createElement('p');
-		item.innerHTML = searchList[i].name + ' ' + searchList[i].price + ' kr';
-		searchResult.appendChild(item);
-	}
+	let totalSum = document.createElement('p');
+	totalSum.innerHTML = 'Totalt: ' + total + ' kr';
+	searchResult.appendChild(totalSum);
 }
