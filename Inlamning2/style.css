@@ -1,131 +1,149 @@
 /* Path: Inlamning2/style.css */
 body {
-    background-color: #130f40;
-    font-family: 'Times New Roman', Times, serif;
-    color: #fff;
+	background-color: #130f40;
+	font-family: 'Times New Roman', Times, serif;
+	color: #fff;
 }
 .button {
-    background-color: #130f40;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
+	background-color: #130f40;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
 }
 .button1 {
-    background-color: #22a6b3;
-    color: black;
-    border: 2px solid #22a6b3;
+	background-color: #22a6b3;
+	color: black;
+	border: 2px solid #22a6b3;
 }
 
 .button1:hover {
-    background-color: #130f40;
-    color: white;
+	background-color: #130f40;
+	color: white;
 }
 
 .search-box {
-    width: fit-content;
-    height: fit-content;
-    position: relative;
+	width: fit-content;
+	height: fit-content;
+	position: relative;
 }
 .input-search {
-    height: 50px;
-    width: 50px;
-    border-style: none;
-    padding: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    outline: none;
-    border-radius: 25px;
-    transition: all 0.5s ease-in-out;
-    background-color: #22a6b3;
-    padding-right: 40px;
-    color: #fff;
+	height: 50px;
+	width: 50px;
+	border-style: none;
+	padding: 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out;
+	background-color: #22a6b3;
+	padding-right: 40px;
+	color: #fff;
 }
 .input-search::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 18px;
-    letter-spacing: 2px;
-    font-weight: 100;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: 100;
 }
 .btn-search {
-    width: 50px;
-    height: 50px;
-    border-style: none;
-    font-size: 20px;
-    font-weight: bold;
-    outline: none;
-    cursor: pointer;
-    border-radius: 50%;
-    position: absolute;
-    right: 0px;
-    color: #ffffff;
-    background-color: transparent;
-    pointer-events: painted;
+	width: 50px;
+	height: 50px;
+	border-style: none;
+	font-size: 20px;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50%;
+	position: absolute;
+	right: 0px;
+	color: #ffffff;
+	background-color: transparent;
+	pointer-events: painted;
 }
 .btn-search:focus ~ .input-search {
-    width: 300px;
-    border-radius: 0px;
-    background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+	width: 300px;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 .input-search:focus {
-    width: 300px;
-    border-radius: 0px;
-    background-color: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+	width: 300px;
+	border-radius: 0px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 /* Make input bigger in div class add */
 .addNamnPris {
-    width: 200px;
-    height: 20px;
-    border-style: none;
-    padding: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    outline: none;
-    border-radius: 25px;
-    transition: all 0.5s ease-in-out;
-    background-color: #22a6b3;
-    padding-right: 40px;
-    /* make text black in addNamnPris */
-    color: #fff;
+	width: 200px;
+	height: 20px;
+	border-style: none;
+	padding: 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out;
+	background-color: #22a6b3;
+	padding-right: 40px;
+	/* make text black in addNamnPris */
+	color: #fff;
 }
 .addKat {
-    width: 200px;
-    height: 41px;
-    border-style: none;
-    padding: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    outline: none;
-    border-radius: 25px;
-    transition: all 0.5s ease-in-out;
-    background-color: #22a6b3;
-    padding-right: 40px;
-    color: #fff;
+	width: 200px;
+	height: 41px;
+	border-style: none;
+	padding: 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out;
+	background-color: #22a6b3;
+	padding-right: 40px;
+	color: #fff;
 }
 .addButton {
-    width: 150px;
-    height: 41px;
-    border-style: none;
-    padding: 10px;
-    font-size: 18px;
-    letter-spacing: 2px;
-    outline: none;
-    border-radius: 25px;
-    transition: all 0.5s ease-in-out;
-    background-color: #22a6b3;
-    color: #fff;
+	width: 150px;
+	height: 41px;
+	border-style: none;
+	padding: 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out;
+	background-color: #22a6b3;
+	color: #fff;
 }
 .addButton:hover {
-    background-color: #130f40;
-    color: white;
+	background-color: #130f40;
+	color: white;
+}
+
+.visaKorg {
+	width: 200px;
+	height: 41px;
+	border-style: none;
+	padding: 10px;
+	font-size: 18px;
+	letter-spacing: 2px;
+	outline: none;
+	border-radius: 25px;
+	transition: all 0.5s ease-in-out;
+	background-color: #22a6b3;
+	color: #fff;
+}
+.visaKorg:hover {
+	background-color: #130f40;
+	color: white;
 }

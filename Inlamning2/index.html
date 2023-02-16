@@ -1,85 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="utf-8" />
-    <title>Inlämning 2b</title>
-    <head>
-        <!-- Javascript path -->
-    <script type="module" src="./main.js"></script>
-    <!-- Style sheet path -->
-    <link rel="stylesheet" href="./style.css" />
-        <h1>Inlämning 2b</h1>
-    
-        <div class="Alkohol">
-            <h2>Alkohol</h2>
-            <button class="button button1">Carlsberg</button>
-            <button class="button button1">Tuborg</button>
-            <button class="button button1">Heineken</button>
-            <button class="button button1">Corona</button>
-        </div>
-        
-        <div class="Lask">
-            <h2>Läsk</h2>
-            <button 
-            class="button button1" id="Cola" value="Cola">
-                Coca Cola
-            </button>
-            <button class="button button1">Fanta</button>
-            <button class="button button1">Sprite</button>
-            <button class="button button1">Loka</button>
-        </div>
+	<meta charset="utf-8" />
+	<title>Inlämning 2b</title>
+	<head>
+		<!-- Javascript path -->
+		<script
+			rel="Javascript"
+			src="./main.js"
+		></script>
+		<!-- Style sheet path -->
+		<link
+			rel="stylesheet"
+			href="./style.css"
+		/>
+		<h1>Inlämning 2b</h1>
 
-        <div class="Kallt">
-            <h2>Kalldryck</h2>
-            <button class="button button1">Milkshake Choklad</button>
-            <button class="button button1">Milkshake Vanilj</button>
-            <button class="button button1">Milkshake Jordgubb</button>
-            <button class="button button1">Milkshake Banan</button>
-        </div>
+		<div class="Alkohol">
+			<h2>Alkohol</h2>
+			<button
+				class="button button1"
+				id="Carlsberg"
+				value="Carlsberg"
+				onclick="addToBasket(alkohol1)"
+			>
+				Carlsberg
+			</button>
 
-        <div class="Snacks">
-            <h2>Snacks</h2>
-            <button class="button button1">Chips</button>
-            <button class="button button1">Kex</button>
-            <button class="button button1">Nötter</button>
-            <button class="button button1">Kexchoklad</button>
-        </div>
+			<button
+				class="button button1"
+				id="Tuborg"
+				value="Tuborg"
+				onclick="addToBasket(alkohol2)"
+			>
+				Tuborg
+			</button>
+			<button
+				class="button button1"
+				id="Heineken"
+				value="Heineken"
+				onclick="addToBasket(alkohol3)"
+			>
+				Heineken
+			</button>
+			<button
+				class="button button1"
+				id="Corona"
+				value="Corona"
+				onclick="addToBasket(alkohol4)"
+			>
+				Corona
+			</button>
+		</div>
 
-        <div class="search-box">
-            <h1>Sök</h1>
-            <button class="btn-search"><i class="fas fa-search"></i></button>
-            <input type="text" class="input-search" placeholder="Sök..." />
-        </div>
+		<div class="Lask">
+			<h2>Läsk</h2>
+			<button
+				class="button button1"
+				id="Cola"
+				value="Cola"
+				onclick="addToBasket(lask1)"
+			>
+				Coca Cola
+			</button>
+			<button
+				class="button button1"
+				id="Fanta"
+				value="Fanta"
+				onclick="addToBasket(lask2)"
+			>
+				Fanta
+			</button>
+			<button
+				class="button button1"
+				id="Sprite"
+				value="Sprite"
+				onclick="addToBasket(lask3)"
+			>
+				Sprite
+			</button>
+			<button
+				class="button button1"
+				id="Loka"
+				value="Loka"
+				onclick="addToBasket(lask4)"
+			>
+				Loka
+			</button>
+		</div>
 
-        <div class="Add">
-            <h1>Lägg till</h1>
-            <input
-                class="addNamnPris"
-                type="text"
-                id="Namn"
-                placeholder="Namn"
-            />
-            <input
-                class="addNamnPris"
-                type="text"
-                id="Pris"
-                placeholder="Pris"
-            />
+		<div class="Kallt">
+			<h2>Kalldryck</h2>
+			<button
+				class="button button1"
+				id="MilkshakeChoklad"
+				value="MilkshakeChoklad"
+				onclick="addToBasket(kallt1)"
+			>
+				Milkshake Choklad
+			</button>
 
-            <select class="addKat" id="Kategori" placeholder="Kategori">
-                <option value="Alkohol">Alkohol</option>
-                <option value="Lask">Läsk</option>
-                <option value="Kallt">Kalldryck</option>
-                <option value="Snacks">Snacks</option>
-            </select>
-            <br />
-            <br />
-            <button class="addButton" onclick="NewProduct.update()">Lägg till</button>
-        </div>
-        <div class="Varukorg">
-            <h1>Varukorg</h1>
-            <ul id="basket-items"></ul>
-            <p id="basket-total"></p>
-            <div id="Uppdatera"></div>
-    </head>
-    <body></body>
+			<button
+				class="button button1"
+				id="MilkshakeVanilj"
+				value="MilkshakeVanilj"
+				onclick="addToBasket(kallt2)"
+			>
+				Milkshake Vanilj
+			</button>
+
+			<button
+				class="button button1"
+				id="MilkshakeJordgubb"
+				value="MilkshakeJordgubb"
+				onclick="addToBasket(kallt3)"
+			>
+				Milkshake Jordgubb
+			</button>
+
+			<button
+				class="button button1"
+				id="MilkshakeBanan"
+				value="MilkshakeBanan"
+				onclick="addToBasket(kallt4)"
+			>
+				Milkshake Banan
+			</button>
+		</div>
+
+		<div class="Snacks">
+			<h2>Snacks</h2>
+			<button
+				class="button button1"
+				id="Chips"
+				value="Chips"
+				onclick="addToBasket(snacks1)"
+			>
+				Chips
+			</button>
+
+			<button
+				class="button button1"
+				id="Kex"
+				value="Kex"
+				onclick="addToBasket(snacks2)"
+			>
+				Kex
+			</button>
+			<button
+				class="button button1"
+				id="Notter"
+				value="Notter"
+				onclick="addToBasket(snacks3)"
+			>
+				Nötter
+			</button>
+			<button
+				class="button button1"
+				id="Kexchoklad"
+				value="Kexchoklad"
+				onclick="addToBasket(snacks4)"
+			>
+				Kexchoklad
+			</button>
+		</div>
+
+		<div class="search-box">
+			<h1>Sök</h1>
+			<button class="btn-search"><i class="fas fa-search"></i></button>
+			<input
+				type="text"
+				id="search"
+				class="input-search"
+				placeholder="Sök..."
+				onkeypress="searchProduct(this.value)"
+			/>
+		</div>
+
+		<div class="Add">
+			<h1>Lägg till</h1>
+			<input
+				class="addNamnPris"
+				type="text"
+				id="Namn"
+				placeholder="Namn"
+			/>
+			<input
+				class="addNamnPris"
+				type="text"
+				id="Pris"
+				placeholder="Pris"
+			/>
+
+			<select
+				class="addKat"
+				id="Kategori"
+				placeholder="Kategori"
+			>
+				<option value="Alkohol">Alkohol</option>
+				<option value="Lask">Läsk</option>
+				<option value="coldDrinks">Kalldryck</option>
+				<option value="snacks">Snacks</option>
+			</select>
+			<br />
+			<br />
+			<button
+				class="addButton"
+				onclick="addNewProduct()"
+			>
+				Lägg till
+			</button>
+		</div>
+		<div
+			class="Varukorg"
+			id="Varukorg"
+		>
+			<h1>Varukorg</h1>
+			<button
+				class="visaKorg"
+				onclick="visaVarukorg()"
+			>
+				Visa varukorg
+			</button>
+			<div class="Pris"></div>
+		</div>
+	</head>
 </html>
