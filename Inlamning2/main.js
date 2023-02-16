@@ -112,25 +112,25 @@ let coldDrinks = new Lista();
 let snacks = new Lista();
 let basket = new Basket();
 
-let lask1 = new Product('Coca Cola', 20);
-let lask2 = new Product('Fanta', 20);
-let lask3 = new Product('Sprite', 20);
-let lask4 = new Product('Loka', 20);
+let lask1 = new Product('Coca Cola', 25);
+let lask2 = new Product('Fanta', 23);
+let lask3 = new Product('Sprite', 21);
+let lask4 = new Product('Loka', 26);
 
-let alkohol1 = new Product('Carlsberg', 20);
-let alkohol2 = new Product('Tuborg', 20);
-let alkohol3 = new Product('Heineken', 20);
-let alkohol4 = new Product('Corona', 20);
+let alkohol1 = new Product('Carlsberg', 50);
+let alkohol2 = new Product('Tuborg', 58);
+let alkohol3 = new Product('Heineken', 54);
+let alkohol4 = new Product('Corona', 70);
 
-let kallt1 = new Product('Milkshake Choklad', 20);
-let kallt2 = new Product('Milkshake Vanilj', 20);
-let kallt3 = new Product('Milkshake Jordgubb', 20);
-let kallt4 = new Product('Milkshake Banan', 20);
+let kallt1 = new Product('Milkshake Choklad', 110);
+let kallt2 = new Product('Milkshake Vanilj', 121);
+let kallt3 = new Product('Milkshake Jordgubb', 130);
+let kallt4 = new Product('Milkshake Banan', 99);
 
-let snacks1 = new Product('Chips', 20);
-let snacks2 = new Product('Kex', 20);
-let snacks3 = new Product('Nötter', 20);
-let snacks4 = new Product('Kexchoklad', 20);
+let snacks1 = new Product('Chips', 10);
+let snacks2 = new Product('Kex', 5);
+let snacks3 = new Product('Nötter', 30);
+let snacks4 = new Product('Choklad', 15);
 
 lask.add(lask1);
 lask.add(lask2);
